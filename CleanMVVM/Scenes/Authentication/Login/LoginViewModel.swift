@@ -12,9 +12,9 @@ class LoginViewModel {
     fileprivate weak var coordinator: AuthCoordinator?
     fileprivate var loginUseCase = LoginUseCase()
 
-    init(/*view: LoginViewProtocol, */coordinator: AuthCoordinator) {
+    init(/*view: LoginViewProtocol, coordinator: AuthCoordinator*/) {
 //        self.view = view
-        self.coordinator = coordinator
+//        self.coordinator = coordinator
     }
 }
 

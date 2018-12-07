@@ -12,7 +12,7 @@ class LoginConfigurator {
 
     func configure(coordinator: AuthCoordinator) -> LoginViewController {
         let viewController = LoginViewController.instantiate()
-        let loginViewModel = LoginViewModel(/*view: viewController,*/ coordinator: coordinator)
+        let loginViewModel = LoginViewModel(/*view: viewController, coordinator: coordinator*/)
         viewController.viewModel = loginViewModel
         return viewController
     }
