@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4F224BC39D878C80C2C7B727 /* Pods_CleanMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9929213161CDD3DD11CA2BAD /* Pods_CleanMVVMTests.framework */; };
+		6E0D9AB121BD64A7008BDD38 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9AB021BD64A7008BDD38 /* Dynamic.swift */; };
+		6E0D9AB421BD64F4008BDD38 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9AB321BD64F4008BDD38 /* DashboardViewController.swift */; };
+		6E0D9AB621BD650E008BDD38 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9AB521BD650E008BDD38 /* DashboardViewModel.swift */; };
+		6E0D9AB821BD651A008BDD38 /* DashboardConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9AB721BD651A008BDD38 /* DashboardConfigurator.swift */; };
+		6E0D9ABA21BD6528008BDD38 /* DashboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D9AB921BD6528008BDD38 /* DashboardViewController.storyboard */; };
+		6E0D9ABD21BD6CFD008BDD38 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9ABC21BD6CFD008BDD38 /* Customer.swift */; };
+		6E0D9AC021BDA7A5008BDD38 /* FetchCustomerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0D9ABF21BDA7A5008BDD38 /* FetchCustomerUseCase.swift */; };
 		E5867F7821BABCE600A03C92 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5867F7721BABCE600A03C92 /* LoginViewController.swift */; };
 		E5867F7A21BABCEF00A03C92 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5867F7921BABCEF00A03C92 /* LoginViewModel.swift */; };
 		E5867F7C21BABCF800A03C92 /* LoginConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5867F7B21BABCF800A03C92 /* LoginConfigurator.swift */; };
@@ -45,6 +52,13 @@
 		1FBD07A37D8D7ADA90964041 /* Pods_CleanMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E79E80E6B53D87FFCE02D6C /* Pods-CleanMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMVVMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanMVVMTests/Pods-CleanMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		6C25D2525F064E95812CE1FA /* Pods-CleanMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMVVM.release.xcconfig"; path = "Pods/Target Support Files/Pods-CleanMVVM/Pods-CleanMVVM.release.xcconfig"; sourceTree = "<group>"; };
+		6E0D9AB021BD64A7008BDD38 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		6E0D9AB321BD64F4008BDD38 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		6E0D9AB521BD650E008BDD38 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		6E0D9AB721BD651A008BDD38 /* DashboardConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardConfigurator.swift; sourceTree = "<group>"; };
+		6E0D9AB921BD6528008BDD38 /* DashboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardViewController.storyboard; sourceTree = "<group>"; };
+		6E0D9ABC21BD6CFD008BDD38 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		6E0D9ABF21BDA7A5008BDD38 /* FetchCustomerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCustomerUseCase.swift; sourceTree = "<group>"; };
 		926671531AB3BA4351DE83B6 /* Pods-CleanMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CleanMVVM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CleanMVVM/Pods-CleanMVVM.debug.xcconfig"; sourceTree = "<group>"; };
 		9929213161CDD3DD11CA2BAD /* Pods_CleanMVVMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CleanMVVMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5867F7721BABCE600A03C92 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +124,35 @@
 				4E79E80E6B53D87FFCE02D6C /* Pods-CleanMVVMTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6E0D9AB221BD64E6008BDD38 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D9ABE21BDA796008BDD38 /* Use Cases */,
+				6E0D9ABB21BD6CE4008BDD38 /* Models */,
+				6E0D9AB921BD6528008BDD38 /* DashboardViewController.storyboard */,
+				6E0D9AB321BD64F4008BDD38 /* DashboardViewController.swift */,
+				6E0D9AB521BD650E008BDD38 /* DashboardViewModel.swift */,
+				6E0D9AB721BD651A008BDD38 /* DashboardConfigurator.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		6E0D9ABB21BD6CE4008BDD38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D9ABC21BD6CFD008BDD38 /* Customer.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E0D9ABE21BDA796008BDD38 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+				6E0D9ABF21BDA7A5008BDD38 /* FetchCustomerUseCase.swift */,
+			);
+			path = "Use Cases";
 			sourceTree = "<group>";
 		};
 		E5867F7521BAB87500A03C92 /* Authentication */ = {
@@ -196,6 +239,7 @@
 		E5D3682C21BA937B007D5227 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6E0D9AB221BD64E6008BDD38 /* Dashboard */,
 				E5867F7521BAB87500A03C92 /* Authentication */,
 				E5D3683021BA94E8007D5227 /* Splash */,
 			);
@@ -235,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				E5D3683321BA952A007D5227 /* Coordinator.swift */,
+				6E0D9AB021BD64A7008BDD38 /* Dynamic.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -323,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0D9ABA21BD6528008BDD38 /* DashboardViewController.storyboard in Resources */,
 				E5D3684221BA9764007D5227 /* SplashViewController.storyboard in Resources */,
 				E5867F7E21BABD0300A03C92 /* LoginViewController.storyboard in Resources */,
 				E58E7CBB21BA92AB0055BB8C /* LaunchScreen.storyboard in Resources */,
@@ -418,19 +464,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5D3683421BA952A007D5227 /* Coordinator.swift in Sources */,
+				6E0D9AB821BD651A008BDD38 /* DashboardConfigurator.swift in Sources */,
+				6E0D9AC021BDA7A5008BDD38 /* FetchCustomerUseCase.swift in Sources */,
 				E58E7CB321BA92A90055BB8C /* ViewController.swift in Sources */,
 				E5D3683821BA96C2007D5227 /* RootCoordinator.swift in Sources */,
 				E5D3682F21BA93A4007D5227 /* Storyboardable.swift in Sources */,
 				E5D3684621BA9820007D5227 /* SplashViewModel.swift in Sources */,
 				E5867F7C21BABCF800A03C92 /* LoginConfigurator.swift in Sources */,
+				6E0D9AB121BD64A7008BDD38 /* Dynamic.swift in Sources */,
 				E5D3683A21BA96DD007D5227 /* AuthCoordinator.swift in Sources */,
+				6E0D9AB621BD650E008BDD38 /* DashboardViewModel.swift in Sources */,
 				E58E7CB121BA92A90055BB8C /* AppDelegate.swift in Sources */,
 				E5D3683C21BA96F6007D5227 /* AppCoordinator.swift in Sources */,
+				6E0D9ABD21BD6CFD008BDD38 /* Customer.swift in Sources */,
 				E5867F7A21BABCEF00A03C92 /* LoginViewModel.swift in Sources */,
 				E5D3683E21BA9735007D5227 /* SplashViewController.swift in Sources */,
 				E5867F8121BABF7200A03C92 /* LoginUseCase.swift in Sources */,
 				E5D3684421BA97F1007D5227 /* SplashConfigurator.swift in Sources */,
 				E5867F7821BABCE600A03C92 /* LoginViewController.swift in Sources */,
+				6E0D9AB421BD64F4008BDD38 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,13 +640,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZV9U7D7GQT;
+				DEVELOPMENT_TEAM = X6EY7P2429;
 				INFOPLIST_FILE = CleanMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pawelpiatkowski.CleanMVVM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppiatkowski.CleanMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -607,13 +659,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZV9U7D7GQT;
+				DEVELOPMENT_TEAM = X6EY7P2429;
 				INFOPLIST_FILE = CleanMVVM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pawelpiatkowski.CleanMVVM;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ppiatkowski.CleanMVVM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

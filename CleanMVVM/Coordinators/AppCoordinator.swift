@@ -8,8 +8,11 @@
 
 import UIKit
 
+protocol AppCoordinatorDelegate: AnyObject {
+}
+
 /**
- * AppCoordinator handles navigation of the app. Can have child coordinators for features.
+ * AppCoordinator handles navigation of the app. It can have child coordinators for features.
  */
 class AppCoordinator: Coordinator {
     var navigationController: UINavigationController
@@ -19,13 +22,12 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
-//        let model = DashboardModel(title: "My Dashboard", description: "This is a sample description")
-//        let viewController = DashboardConfigurator().configure(model: model, coordinator: self)
-//        navigationController.pushViewController(viewController, animated: false)
+        let model = Customer(name: "John Appleseed", status: "ACTIVE")
+        let viewController = DashboardConfigurator().configure(model: model, delegate: self)
+        navigationController.pushViewController(viewController, animated: false)
     }
+}
 
-    func navigateToMyBills() {
-//        let myBillsViewController = MyBillViewController.instantiate()
-//        navigationController.pushViewController(myBillsViewController, animated: true)
-    }
+extension AppCoordinator: AppCoordinatorDelegate {
+    
 }

@@ -29,8 +29,9 @@ class LoginViewController: UIViewController {
 
     private func bindViewModel() {
         let something = loginButton.reactive.tap.observeNext {
-            print("login tapped ", event)
+            print("login tapped ")
         }
+        print(something)
     }
 
 }
