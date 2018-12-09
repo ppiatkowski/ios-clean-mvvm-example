@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Bond
 
 class LoginViewController: UIViewController {
-//    var presenter: LoginPresenterProtocol?
     var viewModel: LoginViewModel = LoginViewModel()
 
     @IBOutlet weak var phoneNumberTextField: UITextField!
@@ -23,40 +21,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bindViewModel()
         viewModel.start()
     }
 
-    private func bindViewModel() {
-        let something = loginButton.reactive.tap.observeNext {
-            print("login tapped ")
-        }
-        print(something)
-    }
-
 }
 
 
-extension LoginViewController {
-//    func enterCredentials(phoneNumber: String, password: String) {
-//        phoneNumberTextField.text = phoneNumber
-//        passwordTextField.text = password
-//    }
-//
-//    func showMessage(_ message: String?) {
-//        feedbackLabel.text = message
-//    }
-//
-//    func toggleButtons(enabled: Bool) {
-//        loginButton.isEnabled = enabled
-//        registerButton.isEnabled = enabled
-//    }
-//
-//    func showActivityIndicator() {
-//        activityIndicator.startAnimating()
-//    }
-//
-//    func hideActivityIndicator() {
-//        activityIndicator.stopAnimating()
-//    }
-}
