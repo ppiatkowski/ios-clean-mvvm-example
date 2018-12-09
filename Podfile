@@ -6,7 +6,6 @@ target 'CleanMVVM' do
   use_frameworks!
 
   # Pods for CleanMVVM
-  pod 'Bond'
 
   target 'CleanMVVMTests' do
     inherit! :search_paths
