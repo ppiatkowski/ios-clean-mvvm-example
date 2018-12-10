@@ -21,7 +21,6 @@
 		E5867F7E21BABD0300A03C92 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5867F7D21BABD0200A03C92 /* LoginViewController.storyboard */; };
 		E5867F8121BABF7200A03C92 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5867F8021BABF7200A03C92 /* LoginUseCase.swift */; };
 		E58E7CB121BA92A90055BB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E7CB021BA92A90055BB8C /* AppDelegate.swift */; };
-		E58E7CB321BA92A90055BB8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E7CB221BA92A90055BB8C /* ViewController.swift */; };
 		E58E7CB821BA92AB0055BB8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E58E7CB721BA92AB0055BB8C /* Assets.xcassets */; };
 		E58E7CBB21BA92AB0055BB8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E58E7CB921BA92AB0055BB8C /* LaunchScreen.storyboard */; };
 		E58E7CC621BA92AB0055BB8C /* CleanMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58E7CC521BA92AB0055BB8C /* CleanMVVMTests.swift */; };
@@ -68,7 +67,6 @@
 		E5867F8021BABF7200A03C92 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
 		E58E7CAD21BA92A90055BB8C /* CleanMVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CleanMVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E58E7CB021BA92A90055BB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E58E7CB221BA92A90055BB8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E58E7CB721BA92AB0055BB8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E58E7CBA21BA92AB0055BB8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E58E7CBC21BA92AB0055BB8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 				E5D3683121BA9508007D5227 /* Coordinators */,
 				E5D3682D21BA937F007D5227 /* Utils */,
 				E5D3682C21BA937B007D5227 /* Scenes */,
-				E58E7CB221BA92A90055BB8C /* ViewController.swift */,
 				E58E7CB721BA92AB0055BB8C /* Assets.xcassets */,
 				E58E7CB921BA92AB0055BB8C /* LaunchScreen.storyboard */,
 				E58E7CBC21BA92AB0055BB8C /* Info.plist */,
@@ -439,7 +436,6 @@
 				E5D3683421BA952A007D5227 /* Coordinator.swift in Sources */,
 				6E0D9AB821BD651A008BDD38 /* DashboardConfigurator.swift in Sources */,
 				6E0D9AC021BDA7A5008BDD38 /* FetchCustomerUseCase.swift in Sources */,
-				E58E7CB321BA92A90055BB8C /* ViewController.swift in Sources */,
 				E5D3683821BA96C2007D5227 /* RootCoordinator.swift in Sources */,
 				E5D3682F21BA93A4007D5227 /* Storyboardable.swift in Sources */,
 				E5D3684621BA9820007D5227 /* SplashViewModel.swift in Sources */,
