@@ -33,6 +33,10 @@
 		E5D3684221BA9764007D5227 /* SplashViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5D3684121BA9764007D5227 /* SplashViewController.storyboard */; };
 		E5D3684421BA97F1007D5227 /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D3684321BA97F1007D5227 /* SplashConfigurator.swift */; };
 		E5D3684621BA9820007D5227 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D3684521BA9820007D5227 /* SplashViewModel.swift */; };
+		E5EDBE6021BE69D10020CD7F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDBE5F21BE69D10020CD7F /* RegisterViewController.swift */; };
+		E5EDBE6221BE6B620020CD7F /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDBE6121BE6B620020CD7F /* RegisterViewModel.swift */; };
+		E5EDBE6421BE6B6F0020CD7F /* RegisterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDBE6321BE6B6F0020CD7F /* RegisterConfigurator.swift */; };
+		E5EDBE6621BE6B7E0020CD7F /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5EDBE6521BE6B7E0020CD7F /* RegisterViewController.storyboard */; };
 		EFE56F2F5B563695F17D12EF /* Pods_CleanMVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBD07A37D8D7ADA90964041 /* Pods_CleanMVVM.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +86,10 @@
 		E5D3684121BA9764007D5227 /* SplashViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashViewController.storyboard; sourceTree = "<group>"; };
 		E5D3684321BA97F1007D5227 /* SplashConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		E5D3684521BA9820007D5227 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		E5EDBE5F21BE69D10020CD7F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E5EDBE6121BE6B620020CD7F /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		E5EDBE6321BE6B6F0020CD7F /* RegisterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterConfigurator.swift; sourceTree = "<group>"; };
+		E5EDBE6521BE6B7E0020CD7F /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 		E5867F7521BAB87500A03C92 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E5EDBE5D21BE69930020CD7F /* Register */,
 				E5867F7621BAB87B00A03C92 /* Login */,
 			);
 			path = Authentication;
@@ -281,6 +290,17 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		E5EDBE5D21BE69930020CD7F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				E5EDBE6521BE6B7E0020CD7F /* RegisterViewController.storyboard */,
+				E5EDBE5F21BE69D10020CD7F /* RegisterViewController.swift */,
+				E5EDBE6121BE6B620020CD7F /* RegisterViewModel.swift */,
+				E5EDBE6321BE6B6F0020CD7F /* RegisterConfigurator.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -364,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EDBE6621BE6B7E0020CD7F /* RegisterViewController.storyboard in Resources */,
 				6E0D9ABA21BD6528008BDD38 /* DashboardViewController.storyboard in Resources */,
 				E5D3684221BA9764007D5227 /* SplashViewController.storyboard in Resources */,
 				E5867F7E21BABD0300A03C92 /* LoginViewController.storyboard in Resources */,
@@ -441,6 +462,8 @@
 				E5D3684621BA9820007D5227 /* SplashViewModel.swift in Sources */,
 				E5867F7C21BABCF800A03C92 /* LoginConfigurator.swift in Sources */,
 				6E0D9AB121BD64A7008BDD38 /* Dynamic.swift in Sources */,
+				E5EDBE6021BE69D10020CD7F /* RegisterViewController.swift in Sources */,
+				E5EDBE6421BE6B6F0020CD7F /* RegisterConfigurator.swift in Sources */,
 				E5D3683A21BA96DD007D5227 /* AuthCoordinator.swift in Sources */,
 				6E0D9AB621BD650E008BDD38 /* DashboardViewModel.swift in Sources */,
 				E58E7CB121BA92A90055BB8C /* AppDelegate.swift in Sources */,
@@ -448,6 +471,7 @@
 				6E0D9ABD21BD6CFD008BDD38 /* Customer.swift in Sources */,
 				E5867F7A21BABCEF00A03C92 /* LoginViewModel.swift in Sources */,
 				E5D3683E21BA9735007D5227 /* SplashViewController.swift in Sources */,
+				E5EDBE6221BE6B620020CD7F /* RegisterViewModel.swift in Sources */,
 				E5867F8121BABF7200A03C92 /* LoginUseCase.swift in Sources */,
 				E5D3684421BA97F1007D5227 /* SplashConfigurator.swift in Sources */,
 				E5867F7821BABCE600A03C92 /* LoginViewController.swift in Sources */,

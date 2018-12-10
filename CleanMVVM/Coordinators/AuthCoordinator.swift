@@ -40,8 +40,7 @@ extension AuthCoordinator: AuthCoordinatorDelegate {
     }
 
     func userDidTapRegister() {
-        print("TODO implement navigateToRegisterUser")
-        //        let viewController = RegisterConfigurator().configure(coordinator: self)
-        //        navigationController.pushViewController(viewController, animated: true)
+        let viewController = RegisterConfigurator().configure(delegate: self)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
