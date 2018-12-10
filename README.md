@@ -4,7 +4,14 @@ This app demonstrates an architecture that I find useful for small to medium siz
 
 The architecture is based on **MVVM (Model - View - ViewModel)**. On top of that there is one significant modification inspired by **Clean Architecture** - ViewModel focuses only on UI logic. All business logic should be done using **Use Cases** (aka Interactors) which are owned by ViewModel. 
 
-**TODO diagram**
+Conceptually it looks like this:
+
+![](MVVM+UseCase.png)
+
+**Data Binding**
+
+To implement Data Binding I used a small class called `Dynamic` that I borrowed from Dino Bartosak's blog post [An Introduction to the MVVM Design Pattern
+](https://www.toptal.com/ios/swift-tutorial-introduction-to-mvvm). Data Binding is 1-directional (View is automatically notified when ViewModel is changed). If you want to move in the direction of Reactive programming you can use RxSwift instead. It also provides tools for 2-directional data binding and much more.
 
 ### Coordinator Pattern
 Navigation in the app is done using the **[Coordinator Design Pattern](https://will.townsend.io/2016/an-ios-coordinator-pattern)** . This makes it easy to understand and modify navigation flows. It also breaks tight coupling between ViewControllers making it easy to reuse ViewControllers in a different context. (Typically View Controllers push other ViewControllers creating a hardcoded relationship between them. Coordinator breaks this relationship by acting as a middle man). Ideally all transitions between views should be done inside the Coordinators. This means assigning rootViewController, pushing, popping, presenting and dismissing UIViewControllers.
