@@ -16,16 +16,16 @@ protocol DashboardViewModelProtocol {
 }
 
 class DashboardViewModel: DashboardViewModelProtocol {
-    fileprivate weak var delegate: AppCoordinatorDelegate?
+    fileprivate weak var coordinatorDelegate: AppCoordinatorDelegate?
     fileprivate var fetchCustomerUseCase = FetchCustomerUseCase()
     
     var customer: Dynamic<Customer>
     var isFetching: Dynamic<Bool>
     
-    init(model: Customer, delegate: AppCoordinatorDelegate) {
+    init(model: Customer, coordinatorDelegate: AppCoordinatorDelegate) {
         customer = Dynamic<Customer>(model)
         isFetching = Dynamic<Bool>(false)
-        self.delegate = delegate
+        self.coordinatorDelegate = coordinatorDelegate
     }
 
     func refreshButtonTapped() {

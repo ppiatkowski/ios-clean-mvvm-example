@@ -10,8 +10,8 @@ import Foundation
 
 class DashboardConfigurator {
     
-    func configure(model: Customer, delegate: AppCoordinatorDelegate) -> DashboardViewController {
-        let viewModel = DashboardViewModel(model: model, delegate: delegate)
+    func configure(model: Customer, coordinatorDelegate: AppCoordinatorDelegate) -> DashboardViewController {
+        let viewModel = DashboardViewModel(model: model, coordinatorDelegate: coordinatorDelegate)
         let viewController = DashboardViewController.instantiate()
         viewController.viewModel = viewModel
         return viewController

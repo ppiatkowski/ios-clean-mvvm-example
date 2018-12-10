@@ -23,7 +23,7 @@ class AppCoordinator: Coordinator {
 
     func start() {
         let model = Customer(name: "John Appleseed", status: "ACTIVE")
-        let viewController = DashboardConfigurator().configure(model: model, delegate: self)
+        let viewController = DashboardConfigurator().configure(model: model, coordinatorDelegate: self)
         navigationController.pushViewController(viewController, animated: false)
     }
 }
