@@ -8,55 +8,55 @@
 
 import Foundation
 
-class LoginViewModel {
-    fileprivate weak var coordinator: AuthCoordinator?
-    fileprivate var loginUseCase = LoginUseCase()
+protocol LoginViewModelProtocol {
+    var feedback: Dynamic<String> { get }
+    var isLoading: Dynamic<Bool> { get }
 
-    init(/*view: LoginViewProtocol, coordinator: AuthCoordinator*/) {
-//        self.view = view
-//        self.coordinator = coordinator
-    }
+    func loginButtonTapped(phoneNumber: String?, password: String?)
+    func registerButtonTapped()
 }
 
-extension LoginViewModel {
+class LoginViewModel: LoginViewModelProtocol {
+    fileprivate weak var coordinatorDelegate: AuthCoordinatorDelegate?
+    fileprivate var loginUseCase = LoginUseCase()
 
-    func start() {
-//        view?.toggleButtons(enabled: true)
+    var feedback: Dynamic<String> = Dynamic("")
+    var isLoading: Dynamic<Bool> = Dynamic(false)
+
+    init(delegate: AuthCoordinatorDelegate) {
+        coordinatorDelegate = delegate
     }
 
-//    func loginButtonTapped(phoneNumber: String?, password: String?) {
-//        guard let phoneNumber = phoneNumber, phoneNumber.isEmpty == false else {
-//            view?.showMessage("Enter phone number")
-//            return
-//        }
-//
-//        guard let password = password, password.isEmpty == false else {
-//            view?.showMessage("Enter password")
-//            return
-//        }
-//
-//        view?.showMessage(nil)
-//        view?.showActivityIndicator()
-//        view?.toggleButtons(enabled: false)
-//        loginUseCase.login(withPhoneNumber: phoneNumber, password: password) { [weak self] success in
-//            guard let strongSelf = self else {
-//                return
-//            }
-//            strongSelf.view?.hideActivityIndicator()
-//            strongSelf.view?.toggleButtons(enabled: true)
-//            if success {
-//                print("Logged in successfully")
-//                strongSelf.view?.showMessage(nil)
-//                strongSelf.coordinator?.exit()
-//
-//            } else {
-//                print("Failed to log in")
-//                strongSelf.view?.showMessage("Invalid phone number and/or password")
-//            }
-//        }
-//    }
+    func loginButtonTapped(phoneNumber: String?, password: String?) {
+        guard let phoneNumber = phoneNumber, phoneNumber.isEmpty == false else {
+            feedback.value = "Enter phone number"
+            return
+        }
 
-//    func registerButtonTapped() {
-//        coordinator?.navigateToRegisterUser()
-//    }
+        guard let password = password, password.isEmpty == false else {
+            feedback.value = "Enter password"
+            return
+        }
+
+        feedback.value = ""
+        isLoading.value = true
+        loginUseCase.login(withPhoneNumber: phoneNumber, password: password) { [weak self] success in
+            guard let strongSelf = self else {
+                return
+            }
+            strongSelf.isLoading.value = false
+            if success {
+                print("Logged in successfully")
+                strongSelf.feedback.value = ""
+                strongSelf.coordinatorDelegate?.userDidLogIn()
+            } else {
+                print("Failed to log in")
+                strongSelf.feedback.value = "Invalid phone number and/or password"
+            }
+        }
+    }
+
+    func registerButtonTapped() {
+        coordinatorDelegate?.userDidTapRegister()
+    }
 }

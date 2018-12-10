@@ -58,8 +58,7 @@ class RootCoordinator: Coordinator {
 extension RootCoordinator: RootCoordinatorDelegate {
 
     func splashDidFinish() {
-//        navigateToAuthenticationFlow() // TODO
-        navigateToDashboard()
+        navigateToAuthenticationFlow()
     }
 
     func userDidLogIn() {

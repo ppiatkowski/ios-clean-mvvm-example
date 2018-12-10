@@ -8,6 +8,12 @@
 
 import UIKit
 
+protocol AuthCoordinatorDelegate: AnyObject {
+    func userDidTapRegister()
+    func userDidLogIn()
+}
+
+
 class AuthCoordinator: Coordinator {
     var navigationController: UINavigationController
     fileprivate weak var delegate: RootCoordinatorDelegate?
@@ -18,16 +24,24 @@ class AuthCoordinator: Coordinator {
     }
 
     func start() {
-        let viewController = LoginConfigurator().configure(coordinator: self)
+        let viewController = LoginConfigurator().configure(delegate: self)
         navigationController.pushViewController(viewController, animated: false)
-    }
-
-    func navigateToRegisterUser() {
-//        let viewController = RegisterConfigurator().configure(coordinator: self)
-//        navigationController.pushViewController(viewController, animated: true)
     }
 
     func exit() {
         delegate?.userDidLogIn()
+    }
+}
+
+extension AuthCoordinator: AuthCoordinatorDelegate {
+
+    func userDidLogIn() {
+        exit()
+    }
+
+    func userDidTapRegister() {
+        print("TODO implement navigateToRegisterUser")
+        //        let viewController = RegisterConfigurator().configure(coordinator: self)
+        //        navigationController.pushViewController(viewController, animated: true)
     }
 }

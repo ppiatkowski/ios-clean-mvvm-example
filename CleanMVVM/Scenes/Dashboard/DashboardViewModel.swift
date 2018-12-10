@@ -23,8 +23,8 @@ class DashboardViewModel: DashboardViewModelProtocol {
     var isFetching: Dynamic<Bool>
     
     init(model: Customer, delegate: AppCoordinatorDelegate) {
-        self.customer = Dynamic<Customer>(model)
-        self.isFetching = Dynamic<Bool>(false)
+        customer = Dynamic<Customer>(model)
+        isFetching = Dynamic<Bool>(false)
         self.delegate = delegate
     }
 

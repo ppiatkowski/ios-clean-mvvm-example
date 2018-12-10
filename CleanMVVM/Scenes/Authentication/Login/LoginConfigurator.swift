@@ -10,10 +10,10 @@ import Foundation
 
 class LoginConfigurator {
 
-    func configure(coordinator: AuthCoordinator) -> LoginViewController {
+    func configure(delegate: AuthCoordinatorDelegate) -> LoginViewController {
+        let viewModel = LoginViewModel(delegate: delegate)
         let viewController = LoginViewController.instantiate()
-        let loginViewModel = LoginViewModel(/*view: viewController, coordinator: coordinator*/)
-        viewController.viewModel = loginViewModel
+        viewController.viewModel = viewModel
         return viewController
     }
 }

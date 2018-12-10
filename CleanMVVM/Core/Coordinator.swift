@@ -6,8 +6,6 @@
 //  Copyright © 2018 Paweł Piątkowski. All rights reserved.
 //
 
-import UIKit
-
 protocol Coordinator {
     var navigationController: UINavigationController { get set }
 

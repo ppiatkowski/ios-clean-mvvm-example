@@ -27,7 +27,7 @@ class FetchCustomerUseCase {
     
     private func randomName() -> String {
         let firstNamePool = ["John", "Paul", "Jim", "Robert", "Ann", "Kate", "Emily", "Jane"]
-        let lastNamePool = ["Appleseed", "Martin", "Torvalds"]
+        let lastNamePool = ["Appleseed", "Martin", "Torvalds", "Kernighan", "Ritchie", "Lovelace"]
         
         let firstName = firstNamePool.randomElement() ?? ""
         let lastName = lastNamePool.randomElement() ?? ""
