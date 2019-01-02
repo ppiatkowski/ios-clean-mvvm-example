@@ -8,6 +8,17 @@ Conceptually it looks like this:
 
 ![](MVVM+UseCase.png)
 
+### Rules of MVVM:
+The description above is abstract and can be interpreted in a number of ways. To make it more easily applicable here are some actionable rules that should be followed in MVVM architecture:
+
+ * `ViewModel` does not have any reference to `View`. `ViewModel` can change `View` by changing the binded properties. `View` will be automatically notified of these changes through data binding.
+ * `Model` has no reference to `ViewModel` and no reference to `View`.
+ * `View` owns `ViewModel`
+ * `View` can have more than one `ViewModel`
+ * `View` should have as little logic as possible. No business logic is allowed in `View`.
+ * `ViewModel` should not import UIKit. All UI work needs to happen in `View`
+ * `ViewModel` should be fully covered with unit tests
+
 **Data Binding**
 
 To implement Data Binding I used a small class called `Dynamic` that I borrowed from Dino Bartosak's blog post [An Introduction to the MVVM Design Pattern
